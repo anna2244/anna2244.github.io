@@ -37,7 +37,11 @@
             countobj.innerHTML = "<b>" + i + "</b>";
 
             var colorChange = (10-i)/10;
-            document.body.style.backgroundColor = "rgb(" + Math.floor(255 * colorChange)+ ", 0, 0)";
+            var redValue = Math.floor(255 * colorIntensity);
+            var greenValue = Math.floor(255 * (1 - colorIntensity));
+            var blueValue = Math.floor(255 * (1 - colorIntensity));
+
+            document.body.style.backgroundColor = "rgb(" + redValue + "," + greenValue + "," + blueValue + ")";
 
 
             if (i <= 0) { // double "==" is equality comparison
