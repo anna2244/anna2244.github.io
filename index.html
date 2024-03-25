@@ -36,51 +36,15 @@
             console.log("Updating i: " + i);
             countobj.innerHTML = "<b>" + i + "</b>";
 
+            var redValue = Math.floor(255 - 25.5 * i);
+            document.body.style.backgroundColor = "rgb(" + redValue + ", 0, 0)";
+
 
             if (i <= 0) { // double "==" is equality comparison
                 countobj.innerHTML = "<b><font size='+5'>BOOM!</b>";
                   document.body.style.backgroundColor = "rgb(156, 12, 2)";
 
             }
-            if (i == 10) {
-              document.body.style.backgroundColor = "rgb(255,0,0)";
-            }
-            if (i == 9) {
-              document.body.style.backgroundColor = "rgb(242, 128, 128)";
-            }
-
-            if (i == 8) {
-              document.body.style.backgroundColor = "rgb(252, 137, 129)";
-            }
-
-            if (i == 7) {
-              document.body.style.backgroundColor = "rgb(255, 110, 99)";
-            }
-
-            if (i == 6) {
-              document.body.style.backgroundColor = "rgb(252, 76, 63)";
-            }
-
-            if (i == 5) {
-              document.body.style.backgroundColor = "rgb(252, 60, 45)";
-            }
-
-            if (i == 4) {
-              document.body.style.backgroundColor = "rgb(252, 30, 13)";
-            }
-
-            if (i == 3) {
-              document.body.style.backgroundColor = "rgb(255, 0, 0)";
-            }
-
-            if (i == 2) {
-              document.body.style.backgroundColor = "rgb(209, 19, 4)";
-            }
-
-            if (i == 1) {
-              document.body.style.backgroundColor = "rgb(179, 16, 4)";
-            }
-            
             
 
         }
