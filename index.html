@@ -37,7 +37,7 @@
             countobj.innerHTML = "<b>" + i + "</b>";
 
             var colorChange = (10-i)/10;
-            var redValue = Math.floor(255 * colorChange);
+            var redValue = Math.floor(255 * (1- colorChange));
             
 
             document.body.style.backgroundColor = "rgb(" + (255 -redValue) + "," + 0 + "," + 0 + ")";
