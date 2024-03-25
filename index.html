@@ -38,8 +38,8 @@
 
             var colorChange = (10-i)/10;
             var redValue = Math.floor(255 * colorIntensity);
-            var greenValue = Math.floor(255 * (1 - colorIntensity));
-            var blueValue = Math.floor(255 * (1 - colorIntensity));
+            var greenValue = Math.floor(255 * (255 * colorIntensity));
+            var blueValue = Math.floor(255 * (255 * colorIntensity));
 
             document.body.style.backgroundColor = "rgb(" + redValue + "," + greenValue + "," + blueValue + ")";
 
