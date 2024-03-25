@@ -38,10 +38,9 @@
 
             var colorChange = (10-i)/10;
             var redValue = Math.floor(255 * colorChange);
-            var greenValue = Math.floor(255 * (1 - colorChange));
-            var blueValue = Math.floor(255 * (1 - colorChange));
+            
 
-            document.body.style.backgroundColor = "rgb(" + redValue + "," + greenValue + "," + blueValue + ")";
+            document.body.style.backgroundColor = "rgb(" + redValue + "," + 0 + "," + 0 + ")";
 
 
             if (i <= 0) { // double "==" is equality comparison
