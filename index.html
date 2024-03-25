@@ -48,22 +48,24 @@
         }
     </script>
 
-    <script>
-      alphabetButton.addEventListener("click", function() {
-        if (currentLetterIndex < alphabet.length)
-          displayElement.textContent = alphabet[currentLetterIndex];
-        currentLetterIndex++;
-      } 
-
-    </script>
 
     <script>
         var i = 10;
         var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         var currentLetterIndex = 0;
         var displayElement = document.getElementById("displayLetter");
-        var alphabetButton = document.getElementById("alphabetButton");
+
+        function displayNextLetter () {
+          if (currentLetterIndex < alphabet.length) {
+            displayElement.textContent = alphabet[currentLetterIndex];
+            currentLetterIndex++;
+          }
+          else {
+            displayElement.textContent = "End of the alphabet";
+          }
+        }
     </script>
+
 
     <h2>Count Down: <span id="count"><script>document.write(i)</script></span></h2>
     <button onclick="updateCount()">Next</button>
