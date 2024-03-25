@@ -36,13 +36,12 @@
             console.log("Updating i: " + i);
             countobj.innerHTML = "<b>" + i + "</b>";
 
-            var redValue = Math.floor(255 - 25.5 * i);
-            document.body.style.backgroundColor = "rgb(" + redValue + ", 0, 0)";
+            var redValue = Math.floor(255 - (255 * i)/10);
+            document.body.style.backgroundColor = "rgb(" + redValue + ", 255, 255)";
 
 
             if (i <= 0) { // double "==" is equality comparison
                 countobj.innerHTML = "<b><font size='+5'>BOOM!</b>";
-                  document.body.style.backgroundColor = "rgb(156, 12, 2)";
 
             }
             
