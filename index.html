@@ -36,7 +36,6 @@
             countobj = document.getElementById("count");
             console.log("Updating i: " + i);
             countobj.innerHTML = "<b>" + i + "</b>";
-            document.body.style.backgroundColor = "rgb(255, " + colorIntensity + ", " + colorIntensity + ")";
 
 
             if (i <= 0) { // double "==" is equality comparison
@@ -47,8 +46,7 @@
     </script>
 
     <script>
-        var i = 5;
-        var colorChange = i * (255/20)
+        var i = 10;
     </script>
 
     <h2>Count Down: <span id="count"><script>document.write(i)</script></span></h2>
