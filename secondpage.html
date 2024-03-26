@@ -14,6 +14,31 @@
     </div>
     <center>
   <a href="/rotunda.jpg"><img width="500" src="/rotunda.jpg"></a>
+  <img id="cimage" height="600" src="" alt="Image Change">
+  <script>
+    var carouselImage = document.getElementById("cimage");
+    var image = [
+    'https://communications.virginia.edu/sites/communications/files/rotunda-lawnside.jpg'
+    'https://communications.virginia.edu/sites/communications/files/old-cabell.jpg'
+    'https://communications.virginia.edu/sites/communications/files/alderman-and-peabody.jpg'
+    ]
+    var current Index = 0;
+
+    function updateImage () {
+      carouselImage.src = images[currentIndex];
+    }
+    function showNextImage () {
+      currentIndex = (currentIndex + 1);
+      updateImage();
+    }
+    function showPreviousImage () {
+      currentIndex = (currentIndex - 1);
+      updateImage();
+    }
+
+    updateImage();
+    setInterval(showNextImage, 3000);
+  </script>
 </center>
     <a href="index.html">Return to Index</a>
     <center>
