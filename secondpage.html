@@ -24,7 +24,11 @@
 
     #left-nav {
       left: 0;
-    }
+   }
+
+   #rigth-nav {
+    right: 0;
+   }
   </style>
     <link rel="stylesheet" href="/style.css" type="text/css">
   </head>
@@ -45,8 +49,11 @@
       <a href="https://ilovecville.com/7-fun-facts-about-uva/">Here are some fun facts about UVA</a>
     </center>
 
-    <button id="left-nav" class = "nav-area" onclick="showPreviousImage()">
-      <img src="back.png" alt="Previous" style="width: 100%; height: auto;"
+    <button id="left-nav" class = "nav-area" onclick="showPreviousImage()" style="position: absolute; top: 30%;">
+      <img src="back.png" alt="Previous" style="width: 50%; height: 10%;">
+    </button>
+    <button id="right-nav" clsss = "nav-area" onclick="showNextImage()" style="position: absolute; top: 30%; left: 90%;">
+    <img src="next.png" alt = "Next" style="width: 50%; height: 10%;">
     </button>
 
   <script>
