@@ -2,6 +2,9 @@
   <head>
     <title>Page 2</title>
       <style>
+        body {
+        background-color: lavender;
+      }
     .center-text {
       text-align: center;
     }
@@ -13,36 +16,57 @@
     <p><u>You've arrived at the next page!</u></p>
     </div>
     <center>
-  <a href="/rotunda.jpg"><img width="500" src="/rotunda.jpg"></a>
-  <img id="cimage" height="600" src="" alt="Image Change">
-  <script>
-    var carouselImage = document.getElementById("cimage");
-    var image = [
-    'https://communications.virginia.edu/sites/communications/files/rotunda-lawnside.jpg'
-    'https://communications.virginia.edu/sites/communications/files/old-cabell.jpg'
-    'https://communications.virginia.edu/sites/communications/files/alderman-and-peabody.jpg'
-    ]
-    var current Index = 0;
+  <img id="pics" height="400" src="" alt="Image Change">
+  <h2>
+    <button onclick="showPreviousImage()">Previous</button>
+    <button onclick="showNextImage()">Next</button>
+  </h2>
 
-    function updateImage () {
-      carouselImage.src = images[currentIndex];
-    }
-    function showNextImage () {
-      currentIndex = (currentIndex + 1);
-      updateImage();
-    }
-    function showPreviousImage () {
-      currentIndex = (currentIndex - 1);
-      updateImage();
-    }
-
-    updateImage();
-    setInterval(showNextImage, 3000);
-  </script>
-</center>
+    </center>
     <a href="index.html">Return to Index</a>
     <center>
       <a href="https://ilovecville.com/7-fun-facts-about-uva/">Here are some fun facts about UVA</a>
     </center>
+
+  <script>
+    var uvaImage = document.getElementById("pics");
+    var images = [
+    'https://communications.virginia.edu/sites/communications/files/newcomb-hall.jpg',
+    'https://communications.virginia.edu/sites/communications/files/rotunda-lawnside.jpg',
+    'https://communications.virginia.edu/sites/communications/files/old-cabell.jpg',
+    'https://communications.virginia.edu/sites/communications/files/alderman-and-peabody.jpg',
+    'https://communications.virginia.edu/sites/communications/files/garrett-hall.jpg',
+    'https://communications.virginia.edu/sites/communications/files/south-lawn-commons.jpg',
+    'https://communications.virginia.edu/sites/communications/files/thornton-hall.jpg',
+    'https://communications.virginia.edu/sites/communications/files/rouss-hall.jpg',
+    'https://communications.virginia.edu/sites/communications/files/old-dorms.jpg',
+    'https://communications.virginia.edu/sites/communications/files/new-dorms.jpg',
+    'https://communications.virginia.edu/sites/communications/files/davenport-field.jpg',
+    'https://communications.virginia.edu/sites/communications/files/Scott-Stadium_New_Logo_SS_05.jpg',
+    ];
+    var currentIndex = 0;
+
+    function updateImage () {
+      uvaImage.src = images[currentIndex];
+    }
+    function showNextImage () {
+      currentIndex++;
+      if (currentIndex >= images.length) {
+        currentIndex = 0;
+      }
+      updateImage();
+    }
+    function showPreviousImage () {
+      currentIndex--;
+      if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+      }
+      updateImage();
+    }
+
+    updateImage();
+    </script>
+    
+
   </body>
 </html>
