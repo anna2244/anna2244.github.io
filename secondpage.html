@@ -4,9 +4,26 @@
       <style>
         body {
         background-color: lavender;
+        width: 100%;
+        height: 100%;
+        margin: 0;
       }
     .center-text {
       text-align: center;
+    }
+    .nav-area {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20%;
+      height: 100%;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+    }
+
+    #left-nav {
+      left: 0;
     }
   </style>
     <link rel="stylesheet" href="/style.css" type="text/css">
@@ -27,6 +44,10 @@
     <center>
       <a href="https://ilovecville.com/7-fun-facts-about-uva/">Here are some fun facts about UVA</a>
     </center>
+
+    <button id="left-nav" class = "nav-area" onclick="showPreviousImage()">
+      <img src="back.png" alt="Previous" style="width: 100%; height: auto;"
+    </button>
 
   <script>
     var uvaImage = document.getElementById("pics");
