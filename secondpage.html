@@ -29,25 +29,36 @@
    #right-nav {
     right: 0;
    }
+
+
+
+   #locationElement {
+    position: absolute;
+    bottom: 290px;
+    width: 100%;
+    text-align:center;
+   }
   </style>
     <link rel="stylesheet" href="/style.css" type="text/css">
   </head>
   <body>
     <div class="center-text">
-    <p><u>You've arrived at the next page!</u></p>
-    </div>
+      <p><u>You've arrived at the next page!</u></p>
+  </div>
     <center>
   <img id="pics" height="400" src="" alt="Image Change">
+
+  <div id="locationElement"></div>
+
   <h2>
     <button onclick="showPreviousImage()">Previous</button>
     <button onclick="showNextImage()">Next</button>
   </h2>
 
-    </center>
+  <a href="https://ilovecville.com/7-fun-facts-about-uva/">Here are some fun facts about UVA</a>
+  <center>
     <a href="index.html">Return to Index</a>
-    <center>
-      <a href="https://ilovecville.com/7-fun-facts-about-uva/">Here are some fun facts about UVA</a>
-    </center>
+  </center>
 
     <button id="left-nav" class = "nav-area" onclick="showPreviousImage()" style="position: absolute; top: 30%; left: 10%;">
       <img src="next.png" alt="Previous" style="width: 50%; height: 10%; transform: rotate(180deg);">
@@ -58,6 +69,7 @@
 
   <script>
     var uvaImage = document.getElementById("pics");
+    var locationElement = document.getElementById("locationElement");
     var images = [
     'https://communications.virginia.edu/sites/communications/files/newcomb-hall.jpg',
     'https://communications.virginia.edu/sites/communications/files/rotunda-lawnside.jpg',
@@ -72,10 +84,25 @@
     'https://communications.virginia.edu/sites/communications/files/davenport-field.jpg',
     'https://communications.virginia.edu/sites/communications/files/Scott-Stadium_New_Logo_SS_05.jpg',
     ];
+    var locations = [
+      'Newcomb Hall',
+      'Rotunda Lawnside',
+      'Old Cabell Hall',
+      'Alderman and Peabody Buildings',
+      'Garrett Hall',
+      'South Lawn Commons',
+      'Thornton Hall',
+      'Rouss-Robertson Hall',
+      'Old Dorms',
+      'New Dorms',
+      'Davenport Field',
+      'Scott Stadium',
+    ];
     var currentIndex = 0;
 
     function updateImage () {
       uvaImage.src = images[currentIndex];
+      locationElement.textContent = "Location: " + locations[currentIndex];
     }
     function showNextImage () {
       currentIndex++;
