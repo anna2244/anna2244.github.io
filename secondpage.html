@@ -4,36 +4,27 @@
       <style>
         body {
         background-color: lavender;
-        width: 100%;
-        height: 100%;
-        margin: 0;
       }
     .center-text {
       text-align: center;
     }
     .nav-area {
-      position: absolute;
       top: 50%;
-      transform: translateY(-50%);
       width: 20%;
       height: 100%;
-      cursor: pointer;
       background: transparent;
       border: none;
     }
 
-    #left-nav {
+    #left-b {
       left: 0;
    }
 
-   #right-nav {
+   #right-b {
     right: 0;
    }
-
-
-
+  
    #locationElement {
-    position: absolute;
     bottom: 290px;
     width: 100%;
     text-align:center;
@@ -60,10 +51,10 @@
     <a href="index.html">Return to Index</a>
   </center>
 
-    <button id="left-nav" class = "nav-area" onclick="showPreviousImage()" style="position: absolute; top: 30%; left: 10%;">
+    <button id="left-b" class = "nav-area" onclick="showPreviousImage()" style="position: absolute; top: -20%; left: 10%;">
       <img src="next.png" alt="Previous" style="width: 50%; height: 10%; transform: rotate(180deg);">
     </button>
-    <button id="right-nav" class = "nav-area" onclick="showNextImage()" style="position: absolute; top: 30%; left: 70%;">
+    <button id="right-b" class = "nav-area" onclick="showNextImage()" style="position: absolute; top: -20%; left: 70%;">
     <img src="next.png" alt = "Next" style="width: 50%; height: 10%;">
     </button>
 
@@ -121,7 +112,6 @@
 
     updateImage();
     </script>
-    
-
+  
   </body>
 </html>
